@@ -54,10 +54,7 @@ describe('covid-staff-site', function() {
 
         for(var i = 0; i<19; i++) {
             if(i == 10 && voluntary == 0) {
-                cy.get('.text-xl').invoke('text').then((text) => {
-                    cy.log(text)
-                })
-                cy.log('route 1')
+
                 cy.get('button').eq(voluntary).click()
                 cy.next_btn()
                 cy.get('button').eq(Math.floor(Math.random() * 2)).click()
@@ -70,45 +67,26 @@ describe('covid-staff-site', function() {
                 cy.next_btn()
                 i++;
             } else if (i == 10 && voluntary == 1) {
-                cy.get('.text-xl').invoke('text').then((text) => {
-                    cy.log(text)
-                })
-                cy.log('route 2')
+
                 cy.get('button').eq(voluntary).click()
                 cy.next_btn()
             } else {
-                cy.get('.text-xl').invoke('text').then((text) => {
-                    cy.log(text)
-                })
-                cy.log('route 3')
-                cy.log('I1 = ' + i)
+
                 cy.get('button').eq(Math.floor(Math.random() * 2)).click()
                 cy.next_btn()
             }
-            a = i
         }
-        cy.wait(4000)
-        // for(var i = 0; i<21; i++) {
-        //     cy.log('I2 = ' + i)
-        //     cy.get('button').eq(Math.floor(Math.random() * 4)).click()
-        //     cy.next_btn()
-        //     b = i
-        // }
-        // for(var i = 0; i<23; i++){
-        //     cy.log('I3 = ' + i)
-        //     cy.get('button').eq(Math.floor(Math.random() * 7)).click()
-        //     cy.next_btn()
-        //     c = i
-        // }
-        // for(var i = 0; i<15; i++){
-        //     cy.log('I4 = ' + i)
-        //     cy.get('button').eq(Math.floor(Math.random() * 5)).click()
-        //     cy.next_btn()
-        //     d = i
-
-        //     var res = a+b+c+d
-        //     cy.log('tolal = ' + res)
-        // }
-        // cy.wait(4000)
+        for(var i = 0; i<21; i++) {
+            cy.get('button').eq(Math.floor(Math.random() * 4)).click()
+            cy.next_btn()
+        }
+        for(var i = 0; i<22; i++){
+            cy.get('button').eq(Math.floor(Math.random() * 7)).click()
+            cy.next_btn()
+        }
+        for(var i = 0; i<17; i++){
+            cy.get('button').eq(Math.floor(Math.random() * 5)).click()
+            cy.next_btn()
+        }
     })
 })

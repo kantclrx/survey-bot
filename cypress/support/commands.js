@@ -23,3 +23,9 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("next_btn", () => {
+    cy.get('button').contains('ต่อไป').click()
+})
+
+

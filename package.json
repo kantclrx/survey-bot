@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress-open": "cypress open"
+    "cypress-open": "cypress open --config baseUrl=http://covid-staff-test.surge.sh/",
+    "cypress-run": "cypress run --config baseUrl=http://covid-staff-test.surge.sh/" 
+
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +15,7 @@
     "code": "^5.2.4",
     "cypress": "^4.8.0",
     "git": "^0.1.5",
+    "randomstring": "^1.1.5",
     "snap": "^1.1.0"
   }
 }

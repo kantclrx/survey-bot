@@ -1,9 +1,5 @@
 var randomstring = require("randomstring");
-const { expect } = require("code");
-var a
-var b
-var c
-var d
+
 
 describe('covid-staff-site', function() {
     var id
@@ -88,5 +84,7 @@ describe('covid-staff-site', function() {
             cy.get('button').eq(Math.floor(Math.random() * 5)).click()
             cy.next_btn()
         }
+        cy.wait(4000)
+        cy.contains('ข้อมูลของท่านได้รับการบันทึกเรียบร้อยแล้ว')
     })
 })
